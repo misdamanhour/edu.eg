@@ -154,12 +154,14 @@
        if( term == 1 ){
          $('#show2').css("display","none");
          setTimeout( ()=>{
+           $('#name').css("display","block");
            $('#show1').css("display","block");
          }, 2000);
 
        }else if(term == 2){
           $('#show1').css("display","none");
          setTimeout( ()=>{
+           $('#name').css("display","block");
            $('#show2').css("display","block");
          }, 2000);
 
@@ -173,7 +175,7 @@
        let type = $('#type').val();
        let number =$('#number').val();
        console.log(faculty,year,year2,type,number);
-       if(faculty == 0 && year==0 && year2==0 && type==0 && number==16330){
+       if(faculty == 0 && year==0 && year2==0 && type==0 && number==153300){
          return true;
        }else{
          return false;
@@ -368,8 +370,19 @@
           <div align="center">
               <div>
                   <div>
-  	<table rules="rows"  style="background-color:White;border-color:#E7E7FF;border-width:1px;border-style:None;height:50px;width:400px;border-collapse:collapse;display:none;" border="1" cellspacing="0" cellpadding="3">
-
+  	<table rules="rows" id="name" style="background-color:White;border-color:#E7E7FF;border-width:1px;border-style:None;height:50px;width:400px;border-collapse:collapse;margin:10px;display:none;" border="1" cellspacing="0" cellpadding="3">
+      <tr style="background-color:#EFF3FB;">
+        <td>
+          اسم الطالب
+        </td>
+        <td>
+          احمد محمد محمد عطا
+        </td>
+      </tr>
+      <tr>
+        <td>التقدير</td>
+        <td>جيد</td>
+      </tr>
   	</table>
   </div>
               </div>
@@ -379,9 +392,8 @@
   	<table id="show1" style="color:#333333;width:741px;border-collapse:collapse;display:none;" border="0" cellspacing="0" cellpadding="4">
   		<tbody><tr style="color:White;background-color:#507CD1;font-weight:bold;">
   			<th scope="col">اسم الطالب</th><th scope="col">اسم المادة</th><th scope="col">حالة النتيجة</th>
-  		</tr><tr style="background-color:#EFF3FB;">
-  			<td>&nbsp;</td><td>الحاله : <span class="span">ناجح</span></td><td>&nbsp;</td>
-  		</tr><tr style="background-color:White;">
+  		</tr>
+      <tr style="background-color:White;">
   			<td>احمد محمد محمد عطا(ق م)</td><td>اللغة التركية (قواعد) 1</td><td>جيد</td>
   		</tr><tr style="background-color:#EFF3FB;">
   			<td>احمد محمد محمد عطا(ق م)</td><td>اللغة الفارسية (قواعد)(1)</td><td>جيد</td>
@@ -401,8 +413,6 @@
     <table id="show2" style="color:#333333;width:741px;border-collapse:collapse;display:none;" cellspacing="0" cellpadding="4" border="0">
 		<tbody><tr style="color:White;background-color:#507CD1;font-weight:bold;">
 			<th scope="col">اسم الطالب</th><th scope="col">اسم المادة</th><th scope="col">حالة النتيجة</th>
-		</tr><tr style="background-color:#EFF3FB;">
-      <td>&nbsp;</td><td>الحاله : <span class="span">ناجح</span></td><td>&nbsp;</td>
 		</tr><tr style="background-color:White;">
 			<td>احمد محمد محمد عطا(ق م)</td><td>الحضارة الاسلامية</td><td>جيد</td>
 		</tr><tr style="background-color:#EFF3FB;">
